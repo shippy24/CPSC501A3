@@ -70,13 +70,30 @@ public class ObjectCreator {
         return refObj;
     } 
 
-    /*
+    
     //Creates and returns a PrimitiveArray object 
-    public SimpleArrayObject createPrimitiveArrayObject() {
+    public PrimitiveArrayObject createPrimitiveArrayObject() {
+        System.out.println("Creating PrimitiveArray Object");
+        PrimitiveArrayObject primArrayObject = null;
+        
+        //Prompt user for array length 
+        System.out.println("Enter size of array:");
+        handleInput(1);
+        int arrayLength = in.nextInt();
 
+        //Allow user to set the values of the array elements
+        String[] paramArray = new String[arrayLength];
+        System.out.println("Press enter after every complete entry");
 
+        for (int i = 0; i < paramArray.length; i++) {
+            System.out.printf("Enter value for index %d:\n", i);
+            paramArray[i] = in.nextLine();
+        }
+
+        primArrayObject = new PrimitiveArrayObject(paramArray);
+        return primArrayObject;
     }  
-
+    /*
     //Creates and returns a ReferenceArray Object
     public ReferenceArrayObject createReferenceArrayObject() {
 
