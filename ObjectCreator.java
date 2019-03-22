@@ -115,13 +115,32 @@ public class ObjectCreator {
         return refArrayObject;
 
     }
-    /*
+    
     //Creates and returns a Collections Object
     public CollectionObject createCollectionObject() {
+        System.out.println("Creating Collections Object");
+        CollectionObject colObj = null;
 
-
+        Vector<Object> paramCollection = new Vector<Object>();
+        //Prompt user for creation of objects into collection
+        boolean quit = false;
+        String choice;
+        while(!quit){
+            System.out.println("Add object to collections yes = 1 and no = 0");
+            handleInput(3);
+            choice = in.nextLine();
+            
+            if (choice.equals("0")) {
+                quit = true;
+            }
+            else {
+                paramCollection.add(createPrimitiveObject());
+            }
+            colObj = new CollectionObject(paramCollection);
+        }
+        return colObj;    
     }
-*/
+
     public static void handleInput(int mode) {
         switch (mode) {
             case 1 : {
@@ -135,6 +154,13 @@ public class ObjectCreator {
                 while (!in.hasNextFloat()) {
                     in.next();
                     System.out.println("Invalid value for float field");
+                }
+                break;
+            }
+            case 3 : {
+                while (!in.hasNextInt() || (in.nextLine().equals("0")) || (in.nextLine().equals("1"))) {
+                    in.next();
+                    System.out.println("Invalid choice, 0 = don't add to collection, 1 = add to collection");
                 }
                 break;
             }
