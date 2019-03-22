@@ -57,13 +57,20 @@ public class ObjectCreator {
         
         return primObj;
     }
-    /*
+    
     //Creates and returns an instance of a reference object
     public ReferenceObject createReferenceObject() {
+        System.out.println("Creating Reference Object");
+        ReferenceObject refObj = null;
 
+        //Creation of other objects at same time
+        PrimitiveObject primObj = createPrimitiveObject();
+        refObj = new ReferenceObject(primObj);
 
+        return refObj;
     } 
 
+    /*
     //Creates and returns a PrimitiveArray object 
     public SimpleArrayObject createPrimitiveArrayObject() {
 

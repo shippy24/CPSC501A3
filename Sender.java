@@ -45,8 +45,11 @@
             switch (object) {
                 case "1" : {
                     objectList.add(objCreator.createPrimitiveObject());
+                    break;
                 }
-                case "2" :
+                case "2" : {
+                    objectList.add(objCreator.createReferenceObject());
+                }
                 case "3" :
                 case "4" :
                 case "5" :
