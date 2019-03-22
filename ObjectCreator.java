@@ -93,13 +93,29 @@ public class ObjectCreator {
         primArrayObject = new PrimitiveArrayObject(paramArray);
         return primArrayObject;
     }  
-    /*
+    
     //Creates and returns a ReferenceArray Object
     public ReferenceArrayObject createReferenceArrayObject() {
+        System.out.println("Creating ReferenceArray Object");
+        ReferenceArrayObject refArrayObject = null;
 
+        //Prompt user for array length 
+        System.out.println("Enter size of array:");
+        handleInput(1);
+        int arrayLength = in.nextInt();
+
+        Object[] paramArray = new PrimitiveArrayObject[arrayLength];
+
+        for (int i = 0; i < paramArray.length; i++) {
+            //Creation of primitive objects at same time
+            paramArray[i] = createPrimitiveObject();
+        }
+
+        refArrayObject = new ReferenceArrayObject(paramArray);
+        return refArrayObject;
 
     }
-
+    /*
     //Creates and returns a Collections Object
     public CollectionObject createCollectionObject() {
 

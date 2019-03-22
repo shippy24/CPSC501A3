@@ -1,3 +1,7 @@
 ObjectCreator.class
 Sender.class
 jdom/
+PrimitiveArrayObject.class
+PrimitiveObject.class
+ReferenceObject.class
+ReferenceArrayObject.class

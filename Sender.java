@@ -49,9 +49,16 @@
                 }
                 case "2" : {
                     objectList.add(objCreator.createReferenceObject());
+                    break;
                 }
-                case "3" :
-                case "4" :
+                case "3" : {
+                    objectList.add(objCreator.createPrimitiveArrayObject());
+                    break;
+                }
+                case "4" : {
+                    objectList.add(objCreator.createReferenceArrayObject());
+                    break;
+                }
                 case "5" :
                     {
                         //Call createObject
