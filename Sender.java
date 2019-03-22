@@ -9,13 +9,16 @@
  import org.jdom2.*;
  import java.util.Scanner;
  import java.io.*;
+ import java.util.ArrayList;
 
  public class Sender {
+
+    private static ArrayList<Object> objectList;
 
     public static void main (String[] args) {
 
         //Initialization
-        //ObjectCreator objCreator = new ObjectCreator();
+        ObjectCreator objCreator = new ObjectCreator();
         //Serializer serializer = new Serializer();
         //XMLOutputter xmlOut = new XMLOutputter();
         Scanner in = new Scanner(System.in);
@@ -40,7 +43,9 @@
 
         for (String object : objectArray) {
             switch (object) {
-                case "1" :
+                case "1" : {
+                    objectList.add(objCreator.createPrimitiveObject());
+                }
                 case "2" :
                 case "3" :
                 case "4" :

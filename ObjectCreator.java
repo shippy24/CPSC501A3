@@ -25,35 +25,80 @@ import org.jdom2.*;
 import org.jdom2.output.*;
 import java.util.*;
 import java.io.*;
+import java.util.Scanner;
+
+
 public class ObjectCreator {
 
-    //Creates and returns an instance of a simple primitive object
-    public static SimpleObject createPrimitiveObject() {
-        
-        
-    }
+    private static Scanner in = new Scanner(System.in);
 
+    //Creates and returns an instance of a simple primitive object
+    public PrimitiveObject createPrimitiveObject() {
+        System.out.println("Creating Primitive Object");
+        PrimitiveObject primObj = null;
+        System.out.println("DEBUG : PrimitiveObject(int, float, boolean");
+
+        try {
+            System.out.print("Setting primitive instance variables");
+
+            //Integer primitive
+            System.out.println("Enter value for integer field");
+            handleInput(1);
+            int intParam = in.nextInt();
+
+            //Float
+            System.out.println("Enter value of float field");
+            handleInput(2);
+            float floatParam = in.nextFloat();
+
+            primObj = new PrimitiveObject(intParam, floatParam);
+
+        }catch(Exception e ) { e.printStackTrace(); }
+        
+        return primObj;
+    }
+    /*
     //Creates and returns an instance of a reference object
-    public static ReferenceObject createReferenceObject() {
+    public ReferenceObject createReferenceObject() {
 
 
     } 
 
     //Creates and returns a PrimitiveArray object 
-    public static SimpleArrayObject createPrimitiveArrayObject() {
+    public SimpleArrayObject createPrimitiveArrayObject() {
 
 
     }  
 
     //Creates and returns a ReferenceArray Object
-    public static ReferenceArrayObject createReferenceArrayObject() {
+    public ReferenceArrayObject createReferenceArrayObject() {
 
 
     }
 
     //Creates and returns a Collections Object
-    public static CollectionObject createCollectionObject() {
+    public CollectionObject createCollectionObject() {
 
 
     }
+*/
+    public static void handleInput(int mode) {
+        switch (mode) {
+            case 1 : {
+                while (!in.hasNextInt()) {
+                    in.next();
+                    System.out.println("Invalid value for int field");
+                }
+                break;
+            }
+            case 2 : {
+                while (!in.hasNextFloat()) {
+                    in.next();
+                    System.out.println("Invalid value for float field");
+                }
+                break;
+            }
+        } 
+    }
+    
  }
