@@ -19,3 +19,41 @@
  * The other objects must also be created at the same time.
  *      An object that uses an instance of one of Java’s collection classes to refer to several other objects. These objects, too, must be created at the same time.
  */
+
+import java.lang.reflect.*;
+import org.jdom2.*;
+import org.jdom2.output.*;
+import java.util.*;
+import java.io.*;
+public class ObjectCreator {
+
+    //Creates and returns an instance of a simple primitive object
+    public static SimpleObject createPrimitiveObject() {
+        
+        
+    }
+
+    //Creates and returns an instance of a reference object
+    public static ReferenceObject createReferenceObject() {
+
+
+    } 
+
+    //Creates and returns a PrimitiveArray object 
+    public static SimpleArrayObject createPrimitiveArrayObject() {
+
+
+    }  
+
+    //Creates and returns a ReferenceArray Object
+    public static ReferenceArrayObject createReferenceArrayObject() {
+
+
+    }
+
+    //Creates and returns a Collections Object
+    public static CollectionObject createCollectionObject() {
+
+
+    }
+ }
