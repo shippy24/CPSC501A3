@@ -10,13 +10,13 @@
  import java.util.Scanner;
  import java.io.*;
  import java.util.ArrayList;
+ import java.net.*;
 
  public class Sender {
 
     private static ArrayList<Object> objectList;
 
     public static void main (String[] args) {
-
         //Initialization
         ObjectCreator objCreator = new ObjectCreator();
         ObjectSerializer serializer = null;
@@ -71,6 +71,38 @@
         //Serialize objects 
         serializer = new ObjectSerializer(objectList);
         //Send objects
-        
+        sendFile("localhost", 8000, serializer.getSerializedFile());
+    }
+    
+    //Sending file 
+    //Code attained from tutorialspoint and modified using stackoverflow additions
+    private static void sendFile(String host, int port, File file){
+        try{
+            System.out.println("Connecting to " + host + " on port: " + port);
+
+            Socket socket = new Socket(host, port);
+            System.out.println("Sender connected to " + socket.getRemoteSocketAddress());
+
+            OutputStream outputStream = socket.getOutputStream();
+            FileInputStream fileInputStream = new FileInputStream(file);
+
+            //send file as byte array stream
+            byte[] fileBytes = new byte[2048 * 2048];
+            int bytesRead = 0;
+            while((bytesRead = fileInputStream.read(fileBytes))> 0){
+                outputStream.write(fileBytes, 0, bytesRead);
+            }
+
+            //close streams/sockets
+            fileInputStream.close();
+            outputStream.close();
+            socket.close();
+
+            System.out.println("File sent!");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
     }
  }
