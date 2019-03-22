@@ -19,8 +19,7 @@
 
         //Initialization
         ObjectCreator objCreator = new ObjectCreator();
-        //Serializer serializer = new Serializer();
-        //XMLOutputter xmlOut = new XMLOutputter();
+        ObjectSerializer serializer = null;
         Scanner in = new Scanner(System.in);
 
         Object obj = null;
@@ -59,11 +58,9 @@
                     objectList.add(objCreator.createReferenceArrayObject());
                     break;
                 }
-                case "5" :
-                    {
-                        //Call createObject
-                        //objCreator.createObject(object);
-                        break;
+                case "5" : {
+                    objectList.add(objCreator.createCollectionObject());    
+                    break;
                     }
                 default :
                     System.out.println("Choice out of accepted range");
@@ -72,7 +69,8 @@
         }
 
         //Serialize objects 
-
+        serializer = new ObjectSerializer(objectList);
         //Send objects
+        
     }
  }
