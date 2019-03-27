@@ -27,10 +27,10 @@ public class ObjectSerializer extends Serializer {
                 Class objClass = obj.getClass();
 
                 System.out.println("Serializing object");
-                //Document document = serialize(obj);
+                Document document = serialize(obj);
 
                 System.out.println("File creation");
-                //serializedFile = makeXMLFile(document);
+                serializedFile = makeXMLFile(document);
             }catch(Exception e) {e.printStackTrace();}
         }
     }

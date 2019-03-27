@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serialized>
+  <object class="ReferenceObject" id="0">
+    <field name="referenceObjectField" declaringclass="ReferenceObject">
+      <reference>1</reference>
+    </field>
+  </object>
+  <object class="PrimitiveObject" id="1">
+    <field name="intField" declaringclass="PrimitiveObject">
+      <value>1</value>
+    </field>
+    <field name="floatField" declaringclass="PrimitiveObject">
+      <value>2.0</value>
+    </field>
+  </object>
+</serialized>

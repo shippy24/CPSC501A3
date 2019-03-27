@@ -14,7 +14,7 @@
 
  public class Sender {
 
-    private static ArrayList<Object> objectList;
+    private static ArrayList<Object> objectList = new ArrayList<>();
 
     public static void main (String[] args) {
         //Initialization

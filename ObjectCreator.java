@@ -104,7 +104,7 @@ public class ObjectCreator {
         handleInput(1);
         int arrayLength = in.nextInt();
 
-        Object[] paramArray = new PrimitiveArrayObject[arrayLength];
+        Object[] paramArray = new Object[arrayLength];
 
         for (int i = 0; i < paramArray.length; i++) {
             //Creation of primitive objects at same time
@@ -127,17 +127,18 @@ public class ObjectCreator {
         String choice;
         while(!quit){
             System.out.println("Add object to collections yes = 1 and no = 0");
-            handleInput(3);
+            //handleInput(3);
             choice = in.nextLine();
             
             if (choice.equals("0")) {
                 quit = true;
             }
-            else {
+            else if (!choice.equals("0")) {
                 paramCollection.add(createPrimitiveObject());
             }
-            colObj = new CollectionObject(paramCollection);
+            in.nextLine();
         }
+        colObj = new CollectionObject(paramCollection);
         return colObj;    
     }
 
@@ -158,9 +159,9 @@ public class ObjectCreator {
                 break;
             }
             case 3 : {
-                while (!in.hasNextInt() || (in.nextLine().equals("0")) || (in.nextLine().equals("1"))) {
-                    in.next();
+                while (!in.hasNextInt() && ((in.nextLine().equals("0")) || (in.nextLine().equals("1")))) {
                     System.out.println("Invalid choice, 0 = don't add to collection, 1 = add to collection");
+                    in.next();
                 }
                 break;
             }

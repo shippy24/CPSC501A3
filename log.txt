@@ -1,0 +1,71 @@
+commit 20b73b8f4f317617a4e3292faf59caccd0936aea
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 15:50:06 2019 -0600
+
+    Final additions and network fully established
+
+commit c1056289a8771463997211cdac9a324311fc9593
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 15:33:42 2019 -0600
+
+    Implemented Reciever with partial network connection (not yet for sender)
+
+commit 28a1312e944bb9ed078e0fc6abb68fb401896b74
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 14:15:14 2019 -0600
+
+    Added sketch implementation of Serializer
+
+commit df3d634e9eaf797207560015ae23c2a32ee4fb00
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 13:42:47 2019 -0600
+
+    Added implementation for collections
+
+commit e2f84ae32cee90ad8b5dd894076de5aa58f69a0a
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 13:12:16 2019 -0600
+
+    Added implementation of referenceArrayObject
+
+commit 38427ddef857401dae17d4d515ef5a20b0a59ac0
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 12:51:16 2019 -0600
+
+    Added implementation for primitive array object creation
+
+commit bed6431d8714cb1a3911632018349939c3d3925c
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 12:19:42 2019 -0600
+
+    Completed implementation of ReferenceObject creator
+
+commit 0c388b655c7126c727e0b4735b3b580009774754
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 12:07:20 2019 -0600
+
+    Completed creation of primitive object creation
+
+commit 1cb10de04b5d9e8b29837f328749c01caafc6f5b
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 11:22:42 2019 -0600
+
+    Basic structure of object creator finished
+
+commit 7f29f9b25e3f73d0bc95e2caeacc5d47fac9591c
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 11:06:09 2019 -0600
+
+    Sender partially implemented
+
+commit 76c3247d2506e64198c7d9a8ca56f1add2d29d3d
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 02:59:53 2019 -0600
+
+    Initial Sender.java structure created and partly implemented
+
+commit 1253a83e5d1d774b101749d0a5a1c0908f6ad9c2
+Author: Shayne Mujuru <shaynemujuru@gmail.com>
+Date:   Fri Mar 22 01:54:24 2019 -0600
+
+    Initializing
